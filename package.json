@@ -1,7 +1,7 @@
 {
   "name": "dummy-app",
   "version": "0.0.1",
-  "description": "",
+  "description": "Dummy App for showing or honning my skills. This App starts here by calling node init",
   "main": "app.js",
   "scripts": {
     "test": "test"
