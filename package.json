@@ -1,0 +1,27 @@
+{
+  "name": "dummy-app",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thalescesarp/dummy-app.git"
+  },
+  "keywords": [
+    "test",
+    "kata",
+    "venturus"
+  ],
+  "author": "Thales César Pires",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thalescesarp/dummy-app/issues"
+  },
+  "homepage": "https://github.com/thalescesarp/dummy-app#readme",
+  "dependencies": {
+    "express.js": "^1.0.0"
+  }
+}
