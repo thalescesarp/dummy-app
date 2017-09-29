@@ -2,14 +2,14 @@
     <table>
         <thead>
             <tr>
-				<th ng-repeat="column in ctrl.options.columns">
+				<th ng-repeat="column in options.columns">
                     <span>{{column.label}}</span>
                 </th>
 			</tr>
         </thead>
         <tbody>
-            <tr ng-repeat="row in data">
-                <td ng-repeat="column in ctrl.options.columns">
+            <tr ng-repeat="row in options.data">
+                <td ng-repeat="column in options.columns">
                     <span>{{getCellValue(row, column)}}</span>
                 </td>
             </tr>
