@@ -57,36 +57,31 @@ angular.extend(DummyApp.constructors, function () {
 
     GridOptions.prototype.verifyColumns = function (columns) {
 
-        if ( !Array.isArray(columns) ) {
-            throw new DummyApp.constructors.DirectiveOptionsException(
-                "grid directive columns must be an array of ColumnOptions!");
-        } else if ( columns.length == 0 ) {
-            throw new DummyApp.constructors.DirectiveOptionsException(
-                "grid directive cannot be empty!");
+        if (!Array.isArray(columns)) {
+            throw new Error("grid directive columns must be an array of ColumnOptions!");
+        } else if (columns.length == 0) {
+            throw new Error("grid directive cannot be empty!");
         } else {
-            var wrongTypeColumns = columns.filter( function(col) { 
-                return !(col instanceof DummyApp.constructors.ColumnOptions); 
+            var wrongTypeColumns = columns.filter(function (col) {
+                return !(col instanceof ColumnOptions);
             });
 
-            if ( wrongTypeColumns.length > 0 ) {
-                throw new DummyApp.constructors.DirectiveOptionsException(
-                    "grid directive columns must be an array of ColumnOptions!");
+            if (wrongTypeColumns.length > 0) {
+                throw new Error("grid directive columns must be an array of ColumnOptions!");
             }
         }
     };
 
-    DummyApp.constructors.GridOptions.prototype.verifyData = function(data) {
-        if ( !Array.isArray(data) ) {
-            throw new DummyApp.constructors.DirectiveOptionsException(
-                "grid directive data must be an array of Objects!");
+    GridOptions.prototype.verifyData = function (data) {
+        if (!Array.isArray(data)) {
+            throw new Error("grid directive data must be an array of Objects!");
         } else {
-            var wrongTypeColumns = data.filter( function(col) { 
-                return !(col instanceof Object); 
+            var wrongTypeColumns = data.filter(function (col) {
+                return !(col instanceof Object);
             });
 
-            if ( wrongTypeColumns.length > 0 ) {
-                throw new DummyApp.constructors.DirectiveOptionsException(
-                    "grid directive data must be an array of Objects!");
+            if (wrongTypeColumns.length > 0) {
+                throw new Error("grid directive data must be an array of Objects!");
             }
         }
     };
