@@ -59,8 +59,6 @@ DummyApp.constructors = DummyApp.constructors || {};
             writable: false, 
             configurable: false
         });
-
-        this.
     };
 
     DummyApp.constructors.GridOptions.prototype.verifyColumns = function(columns) {
