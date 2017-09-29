@@ -25,43 +25,40 @@ angular.module("dummyApp")
         };
     }]);
 
-var DummyApp = DummyApp || {};
-DummyApp.constructors = DummyApp.constructors || {};
-
-(function(){
+angular.extend(DummyApp.constructors, function () {
 
     'use strict';
 
     //To make it maintainable, clear and control the information exchanged with the directive 
     //I define some constructors which must be used to create the options object for the directive. 
 
-    DummyApp.constructors.ColumnOptions = function ColumnOptions(label, cellValueGetter){
+    function ColumnOptions(label, cellValueGetter) {
         this.label = label;
         this.cellValueGetter = cellValueGetter;
     }
 
-    DummyApp.constructors.GridOptions = function GridOptions(columns, data) {
+    function GridOptions(columns, data) {
         this.verifyColumns(columns);
         this.verifyData(data);
 
         //Configuring the property to writable: false and configurable: false
         //prevents the columns array reference to be lost due to mistaken assingments.
-        Object.defineProperty('columns', {
-            value: columns, 
-            enumerable: true, 
-            writable: false, 
+        Object.defineProperty(this, 'columns', {
+            value: columns,
+            enumerable: true,
+            writable: false,
             configurable: false
         });
 
-        Object.defineProperty('data', {
-            value: data, 
-            enumerable: true, 
-            writable: false, 
+        Object.defineProperty(this, 'data', {
+            value: data,
+            enumerable: true,
+            writable: false,
             configurable: false
         });
     };
 
-    DummyApp.constructors.GridOptions.prototype.verifyColumns = function(columns) {
+    GridOptions.prototype.verifyColumns = function (columns) {
 
         if ( !Array.isArray(columns) ) {
             throw new DummyApp.constructors.DirectiveOptionsException(
@@ -96,4 +93,9 @@ DummyApp.constructors = DummyApp.constructors || {};
             }
         }
     };
-});
+
+    return {
+        ColumnOptions: ColumnOptions,
+        GridOptions: GridOptions
+    };
+}());
