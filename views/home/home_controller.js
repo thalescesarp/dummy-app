@@ -3,9 +3,10 @@ angular.module("dummyApp")
 
     'use strict';
 
-    $scope.content = "Scope Test";
-
     var Column = DummyApp.constructors.ColumnOptions;
+    var GridOptions = DummyApp.constructors.GridOptions;
+
+    $scope.content = "Scope Test";
     
     function Rider(email, city, rideInGroup, daysOfWeek, registrationDay) {
         this.email = email;
@@ -15,7 +16,7 @@ angular.module("dummyApp")
         this.registrationDay;
     }
 
-    $scope.bikersGridOptions = new DummyApp.constructors.GridOptions(
+    $scope.bikersGridOptions = new GridOptions(
         [
             new Column("E-mail", function(row){ return row.email; }),
             new Column("City", function(row){ return row.city; }),
