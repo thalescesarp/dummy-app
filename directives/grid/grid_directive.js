@@ -9,19 +9,16 @@ angular.module("dummyApp")
         'use strict';
 
         return {
-            scope: {},
-            controller: 'GridCtrl',
-            controllerAs: 'ctrl',
-            templateUrl: 'directives/grid/grid_template.html',
-            bindToController: {
-            
-            //For the directives that need to be complex I like using an options object.
-            //I was inspired by the configuration objects from the Sencha ExtJS framework.
-            //With an options object I don't need to worry about scope isolation.
-            //It also makes it easier to caller and callee to communicate in both directions.
+            scope: {
+                //For the directives that need to be complex I like using an options object.
+                //I was inspired by the configuration objects from the Sencha ExtJS framework.
+                //With an options object I don't need to worry about scope isolation.
+                //It also makes it easier to caller and callee to communicate in both directions.
 
                 options: '='
-            }
+            },
+            controller: 'GridCtrl',
+            templateUrl: 'directives/grid/grid_template.html',
         };
     }]);
 
