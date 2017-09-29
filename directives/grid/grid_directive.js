@@ -28,17 +28,74 @@ angular.module("dummyApp")
 var DummyApp = DummyApp || {};
 DummyApp.constructors = DummyApp.constructors || {};
 
-//To make it maintainable, clear and control the information exchanged with the directive 
-//I define some constructors which must be used to create the options object for the directive. 
+(function(){
 
-DummyApp.constructors.ColumnOptions = function ColumnOptions(label, cellValueGetter){
-        
-}
+    'use strict';
 
-DummyApp.constructors.GridOptions = function GridOptions(columns, data) {
-    if(!Array.isArray(columns)) {
-        throw "grid directive columns must be an array of ColumnOptions!";
-    } else if (columns.length == 0) {
-        throw 
+    //To make it maintainable, clear and control the information exchanged with the directive 
+    //I define some constructors which must be used to create the options object for the directive. 
+
+    DummyApp.constructors.ColumnOptions = function ColumnOptions(label, cellValueGetter){
+        this.label = label;
+        this.cellValueGetter = cellValueGetter;
     }
-};
+
+    DummyApp.constructors.GridOptions = function GridOptions(columns, data) {
+        this.verifyColumns(columns);
+        this.verifyData(data);
+
+        //Configuring the property to writable: false and configurable: false
+        //prevents the columns array reference to be lost due to mistaken assingments.
+        Object.defineProperty('columns', {
+            value: columns, 
+            enumerable: true, 
+            writable: false, 
+            configurable: false
+        });
+
+        Object.defineProperty('data', {
+            value: data, 
+            enumerable: true, 
+            writable: false, 
+            configurable: false
+        });
+
+        this.
+    };
+
+    DummyApp.constructors.GridOptions.prototype.verifyColumns = function(columns) {
+
+        if ( !Array.isArray(columns) ) {
+            throw new DummyApp.constructors.DirectiveOptionsException(
+                "grid directive columns must be an array of ColumnOptions!");
+        } else if ( columns.length == 0 ) {
+            throw new DummyApp.constructors.DirectiveOptionsException(
+                "grid directive cannot be empty!");
+        } else {
+            var wrongTypeColumns = columns.filter( function(col) { 
+                return !(col instanceof DummyApp.constructors.ColumnOptions); 
+            });
+
+            if ( wrongTypeColumns.length > 0 ) {
+                throw new DummyApp.constructors.DirectiveOptionsException(
+                    "grid directive columns must be an array of ColumnOptions!");
+            }
+        }
+    };
+
+    DummyApp.constructors.GridOptions.prototype.verifyData = function(data) {
+        if ( !Array.isArray(data) ) {
+            throw new DummyApp.constructors.DirectiveOptionsException(
+                "grid directive data must be an array of Objects!");
+        } else {
+            var wrongTypeColumns = data.filter( function(col) { 
+                return !(col instanceof Object); 
+            });
+
+            if ( wrongTypeColumns.length > 0 ) {
+                throw new DummyApp.constructors.DirectiveOptionsException(
+                    "grid directive data must be an array of Objects!");
+            }
+        }
+    };
+});
