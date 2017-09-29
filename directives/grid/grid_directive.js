@@ -1,5 +1,5 @@
 //I think that the bikers grid will be the most complex directive in the page.
-//So I started developing it first. If I find any difficulties early in the project.
+//So I started developing it first. If I find any difficulties early in the project,
 //I still have time to manage, think of a better solution and ask for help to get 
 //some new perspectives.
 
