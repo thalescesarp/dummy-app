@@ -1,5 +1,5 @@
 //I usually create a global object to store constructors,
-//utility functions and constants.
+//utility functions, constants.
 
 var DummyApp = {
     constructors: {},

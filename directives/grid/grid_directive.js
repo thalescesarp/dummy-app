@@ -24,3 +24,21 @@ angular.module("dummyApp")
             }
         };
     }]);
+
+var DummyApp = DummyApp || {};
+DummyApp.constructors = DummyApp.constructors || {};
+
+//To make it maintainable, clear and control the information exchanged with the directive 
+//I define some constructors which must be used to create the options object for the directive. 
+
+DummyApp.constructors.ColumnOptions = function ColumnOptions(label, cellValueGetter){
+        
+}
+
+DummyApp.constructors.GridOptions = function GridOptions(columns, data) {
+    if(!Array.isArray(columns)) {
+        throw "grid directive columns must be an array of ColumnOptions!";
+    } else if (columns.length == 0) {
+        throw 
+    }
+};
