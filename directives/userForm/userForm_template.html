@@ -1,20 +1,10 @@
 <div>
     <form name="userForm" class="row start-xs" ng-submit="submit()">
         <div class="col col-xs-5">
-            <div class="col">
-                <label class="row col-xs">{{labels.FULL_NAME}}</label>
-                <input name="fullName" type="text" ng-model="user.fullName" ng-maxlength="maxlength" required 
-                    ng-focus="fullNameFocussed = true" ng-blur="fullNameFocussed = false" />
-                <div ng-show="fullNameFocussed">{{labels.INPUT_FOCUS_INSTRUCTIONS}}</div>
-            </div>
-            <div class="col">
-                <label class="row col-xs">{{labels.EMAIL}}</label>
-                <input name="email" type="text" ng-model="user.email" ng-maxlength="maxlength" required/>
-            </div>
-            <div class="col">
-                <label class="row col-xs">{{labels.CITY}}</label>
-                <input name="city" type="text" ng-model="user.city" ng-maxlength="maxlength" />
-            </div>
+            <text-field label="{{labels.FULL_NAME}}" name="fullName" ng-model="user.fullName" on-focus-instructions="{{labels.INPUT_FOCUS_INSTRUCTIONS}}"
+                required></text-field>
+            <text-field label="{{labels.EMAIL}}" name="email" ng-model="user.email" required></text-field>
+            <text-field label="{{labels.CITY}}" name="city" ng-model="user.city"></text-field>
         </div>
 
         <!-- Seven columns, one for each day of the week -->
