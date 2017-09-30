@@ -9,7 +9,7 @@
     <tbody>
         <tr ng-repeat="row in options.data">
             <td ng-repeat="column in options.columns">
-                <span>{{getCellValue(row, column)}}</span>
+                <span>{{getCellValue(row, column) | weekDays | date : 'short'}}</span>
             </td>
         </tr>
     </tbody>

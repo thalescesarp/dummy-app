@@ -6,6 +6,7 @@ angular.module("dummyApp")
     var Column = DummyApp.constructors.ColumnOptions;
     var GridOptions = DummyApp.constructors.GridOptions;
     var User = DummyApp.constructors.User;
+    var Week = DummyApp.constructors.Week;
     var labels = $rootScope.labels;
 
     $scope.content = "Scope Test";
@@ -22,9 +23,9 @@ angular.module("dummyApp")
             new Column(labels.REGISTRATION_DAY, function(row){ return row.registrationDay; })
         ],
         [
-            new User("James Isaac Neutron", "neutron@atom.com", "Belo Horizonte", true, "Mon", new Date()),
-            new User("Carl Wheezer", "carl@User.com", "Campinas",true, "Tue", new Date()),
-            new User("Thomas Johnson", "tjhonson@Users.com", "São Paulo", true, "Mon Fri", new Date()),
+            new User("James Isaac Neutron", "neutron@atom.com", "Belo Horizonte", true, new Week(false, true) , new Date()),
+            new User("Carl Wheezer", "carl@User.com", "Campinas",true, new Week(false, false, true), new Date()),
+            new User("Thomas Johnson", "tjhonson@Users.com", "São Paulo", true, new Week(false, true, false, false, false, true), new Date())
         ]
     );
 }]);
