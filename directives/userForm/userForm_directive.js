@@ -30,10 +30,22 @@ angular.extend(DummyApp.constructors, function () {
         this.Sat = Sat || false;
     }
 
-    Week.prototype.toStringByLocale = function toStringByLocale($locale) {
+    Week.prototype.toStringByLocale = function toStringByLocale($locale, labels) {
         var days = Object.keys(this);
         var localDays = $locale.DATETIME_FORMATS.SHORTDAY;
         var activeDaysNames = [];
+
+        if(this.isEveryday()){
+            return labels.EVERYDAY;
+        }
+
+        if(this.isAllWeekDays()){
+            return labels.WEEK_DAYS;
+        }
+
+        if(this.isWeekend()){
+            return labels.WEEKENDS;
+        }
 
         for (var index = 0; index < days.length; index++) {
             var day = days[index];
@@ -48,7 +60,21 @@ angular.extend(DummyApp.constructors, function () {
 
     Week.prototype.anyDay = function anyDay() {
         return this.Sun || this.Mon || this.Tue || this.Wed ||
-               this.Thu || this.Fri || this.Sat;
+            this.Thu || this.Fri || this.Sat;
+    };
+
+    Week.prototype.isEveryday = function isEveryday() {
+        return this.Sun && this.Mon && this.Tue && this.Wed &&
+            this.Thu && this.Fri && this.Sat;
+    };
+
+    Week.prototype.isAllWeekDays = function isAllWeekDays() {
+        return this.Mon && this.Tue && this.Wed && this.Thu && this.Fri;
+    };
+
+    Week.prototype.isWeekend = function isWeekend() {
+        return this.Sun && this.Sat &&
+            !(this.Mon || this.Tue || this.Wed || this.Thu || this.Fri);
     };
 
     function User(fullName, email, city, rideInGroup, daysOfTheWeek, registrationDay) {

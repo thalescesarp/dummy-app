@@ -21,6 +21,10 @@
     "DAYS_OF_THE_WEEK": "Days of the week",
     "REGISTRATION_DAY": "Registration day",
 
+    "EVERYDAY": "Everyday",
+    "WEEK_DAYS": "Week days",
+    "WEEKENDS" : "Weekends",
+
     "INPUT_FOCUS_INSTRUCTIONS": "Instructions to show on input focus.",
     "OPTIONAL": "Optional"
 }
