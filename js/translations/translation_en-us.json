@@ -19,5 +19,7 @@
     "CITY": "City",
     "RIDE_IN_GROUP": "Ride in group",
     "DAYS_OF_THE_WEEK": "Days of the week",
-    "REGISTRATION_DAY": "Registration day"
+    "REGISTRATION_DAY": "Registration day",
+
+    "INPUT_FOCUS_INSTRUCTIONS": "Instructions to show on input focus."
 }

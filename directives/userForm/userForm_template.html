@@ -3,7 +3,9 @@
         <div class="col col-xs-5">
             <div class="col">
                 <label class="row col-xs">{{labels.FULL_NAME}}</label>
-                <input name="fullName" type="text" ng-model="user.fullName" ng-maxlength="maxlength" required/>
+                <input name="fullName" type="text" ng-model="user.fullName" ng-maxlength="maxlength" required 
+                    ng-focus="fullNameFocussed = true" ng-blur="fullNameFocussed = false" />
+                <div ng-show="fullNameFocussed">{{labels.INPUT_FOCUS_INSTRUCTIONS}}</div>
             </div>
             <div class="col">
                 <label class="row col-xs">{{labels.EMAIL}}</label>
