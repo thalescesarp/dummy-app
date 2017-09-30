@@ -16,12 +16,12 @@ angular.extend(DummyApp.constructors, function () {
 
     'use strict';
 
-    function User(fullName, email, city, rideInGroup, daysOfWeek, registrationDay) {
+    function User(fullName, email, city, rideInGroup, daysOfTheWeek, registrationDay) {
         this.fullName = fullName;
         this.email = email;
         this.city = city;
         this.rideInGroup = rideInGroup;
-        this.daysOfWeek = daysOfWeek;
+        this.daysOfTheWeek = daysOfTheWeek;
         this.registrationDay = registrationDay;
     }
 

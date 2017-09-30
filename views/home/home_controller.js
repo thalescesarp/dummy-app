@@ -18,7 +18,7 @@ angular.module("dummyApp")
             new Column(labels.EMAIL, function(row){ return row.email; }),
             new Column(labels.CITY, function(row){ return row.city; }),
             new Column(labels.RIDE_IN_GROUP, function(row){ return row.rideInGroup; }),
-            new Column(labels.DAYS_OF_WEEK, function(row){ return row.daysOfWeek; }),
+            new Column(labels.DAYS_OF_THE_WEEK, function(row){ return row.daysOfTheWeek; }),
             new Column(labels.REGISTRATION_DAY, function(row){ return row.registrationDay; })
         ],
         [

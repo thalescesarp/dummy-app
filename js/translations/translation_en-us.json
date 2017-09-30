@@ -1,4 +1,6 @@
 {
+    "USER_REGISTRATION": "User registration",
+
     "SAVE" : "Save",
     "CLOSE": "Close",
 
@@ -8,6 +10,6 @@
     "EMAIL": "E-mail",
     "CITY": "City",
     "RIDE_IN_GROUP": "Ride in group",
-    "DAYS_OF_WEEK": "Days of week",
+    "DAYS_OF_THE_WEEK": "Days of the week",
     "REGISTRATION_DAY": "Registration day"
 }
