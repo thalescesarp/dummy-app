@@ -1,5 +1,5 @@
 angular.extend(DummyApp.constants, (function () {
     return {
-        translationPath: "js/translation/translation_en-us.json"
+        translationFilePath: "js/translations/translation_en-us.json"
     };
 }()));

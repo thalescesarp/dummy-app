@@ -1,4 +1,11 @@
 {
     "SAVE" : "Save",
-    "CLOSE": "Close"
+    "CLOSE": "Close",
+
+    "FULL_NAME": "Full name",
+    "EMAIL": "E-mail",
+    "CITY": "City",
+    "RIDE_IN_GROUP": "Ride in group",
+    "DAYS_OF_WEEK": "Days of week",
+    "REGISTRATION_DAY": "Registration day"
 }
