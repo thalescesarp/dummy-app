@@ -1,0 +1,32 @@
+/* A css file exclusive for directives */
+/* A css file exclusive for general rules like fonts */
+html {
+  font-family: Arial; }
+
+html, body {
+  height: 100%; }
+
+.stretch-height {
+  margin: 0;
+  width: 100% !important;
+  height: 100% !important; }
+
+.grid-table {
+  border-collapse: collapse;
+  width: 100%; }
+
+.grid-table th {
+  background-color: #34A010;
+  color: #FFFFFF;
+  height: 42px;
+  font-size: 12px; }
+
+.grid-table th,
+.grid-table td {
+  padding: 10px;
+  text-align: left; }
+
+.grid-table tr:nth-child(even) {
+  background: #F0F0F0; }
+
+/*# sourceMappingURL=components.css.map */

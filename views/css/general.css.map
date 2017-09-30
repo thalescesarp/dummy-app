@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,uDAAuD;AAGvD,IACA;EACG,WAAW,EAAE,KAAK",
+"sources": ["general.scss"],
+"names": [],
+"file": "general.css"
+}

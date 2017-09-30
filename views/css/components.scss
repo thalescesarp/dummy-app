@@ -1,0 +1,36 @@
+/* A css file exclusive for directives */
+@import "default-config.scss";
+@import "general.scss";
+
+html, body
+{
+    height: 100%;
+}
+
+.stretch-height{
+    margin: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.grid-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.grid-table th {
+    background-color: $accent-color;
+    color: $primary-color;
+    height: 42px;
+    font-size: 12px;
+}
+
+.grid-table th,
+.grid-table td {
+    padding: 10px;
+    text-align: left;
+}
+
+.grid-table tr:nth-child(even) {
+    background: $light-color
+}
