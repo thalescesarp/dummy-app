@@ -29,4 +29,7 @@ html, body {
 .grid-table tr:nth-child(even) {
   background: #F0F0F0; }
 
+.grid-table tr:hover {
+  background: #C5DFBC; }
+
 /*# sourceMappingURL=components.css.map */

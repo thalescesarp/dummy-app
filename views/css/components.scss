@@ -34,3 +34,7 @@ html, body
 .grid-table tr:nth-child(even) {
     background: $light-color
 }
+
+.grid-table tr:hover {
+    background: $accent-sub-color
+}
