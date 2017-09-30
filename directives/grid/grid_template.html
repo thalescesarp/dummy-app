@@ -1,18 +1,16 @@
-<div ng-controller="GridCtrl">
-    <table class="grid-table">
-        <thead>
-            <tr>
-				<th ng-repeat="column in options.columns">
-                    <span>{{column.label}}</span>
-                </th>
-			</tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="row in options.data">
-                <td ng-repeat="column in options.columns">
-                    <span>{{getCellValue(row, column)}}</span>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<table class="grid-table">
+    <thead>
+        <tr>
+            <th ng-repeat="column in options.columns">
+                <span>{{column.label}}</span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="row in options.data">
+            <td ng-repeat="column in options.columns">
+                <span>{{getCellValue(row, column)}}</span>
+            </td>
+        </tr>
+    </tbody>
+</table>
