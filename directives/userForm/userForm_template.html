@@ -1,0 +1,22 @@
+<div>
+    <form name="userForm" class="row start-xs">
+        <div class="col col-xs-5">
+            <div class="col">
+                <label class="row col-xs">{{labels.FULL_NAME}}</label>
+                <input name="fullName" type="text" ng-model="user.fullName" ng-maxlength="maxlength" required/>
+            </div>
+            <div class="col">
+                <label class="row col-xs">{{labels.EMAIL}}</label>
+                <input name="email" type="text" ng-model="user.email" ng-maxlength="maxlength" required/>
+            </div>
+            <div class="col">
+                <label class="row col-xs">{{labels.CITY}}</label>
+                <input name="city" type="text" ng-model="user.city" ng-maxlength="maxlength" />
+            </div>
+        </div>
+        <!-- Seven columns, one for each day of the week -->
+        <div class="col col-xs-7">
+            {{labels.DAYS_OF_WEEK}}
+        </div>
+    </form>
+</div>
