@@ -1,12 +1,9 @@
 <div class="col" ng-controller="HomeCtrl">
-    <div class="row">
-        <i class="fa fa-home col-xs-1" aria-hidden="true"></i>
-        <span class="col-xs-6">Dummy App Home Test</span>
-    </div>
-    <div class="row">
-        <span class="col-xs-6">{{content}}</span>
-    </div>
+
     <div class="row center-xs">
-        <grid class="col-xs-10" options="bikersGridOptions"></grid>
+        <div class="col-xs-10 start-xs">
+            <h1>{{labels.BIKERS}}</h1>
+            <grid options="bikersGridOptions"></grid>
+        </div>
     </div>
 </div>
