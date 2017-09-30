@@ -1,5 +1,5 @@
 <div>
-    <form name="userForm" class="row start-xs">
+    <form name="userForm" class="row start-xs" ng-submit="submit()">
         <div class="col col-xs-5">
             <div class="col">
                 <label class="row col-xs">{{labels.FULL_NAME}}</label>
@@ -37,9 +37,15 @@
             {{labels.DAYS_OF_THE_WEEK}}
             <div class="row col-xs-12">
                 <div ng-repeat="day in localDaysOfTheWeek">
-                    <input name="daysOfTheWeek" type="checkbox" ng-model="user.daysOfTheWeek[$index]" required/>
+                    <input name="daysOfTheWeek" type="checkbox" ng-model="user.daysOfTheWeek[daysKeys[$index]]" ng-required="!user.daysOfTheWeek.anyDay()"
+                    />
                     <label>{{day}}</label>
                 </div>
+            </div>
+
+            <div class="row end-xs">
+                <input type="button" name="cancel" value="{{labels.CANCEL}}" ng-click="cancel()">
+                <input type="submit" name="save" value="{{labels.SAVE}}">
             </div>
         </div>
     </form>

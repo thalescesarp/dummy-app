@@ -1,4 +1,6 @@
 {
+    "HELP": "Help",
+
     "USER_REGISTRATION": "User registration",
 
     "RIDE_IN_GROUP_QUESTION": "Ride in group?",
@@ -8,7 +10,7 @@
     "NEVER": "Never",
 
     "SAVE" : "Save",
-    "CLOSE": "Close",
+    "CANCEL": "Cancel",
 
     "BIKERS": "Bikers",
 

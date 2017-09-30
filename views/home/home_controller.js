@@ -23,9 +23,22 @@ angular.module("dummyApp")
             new Column(labels.REGISTRATION_DAY, function(row){ return row.registrationDay; })
         ],
         [
-            new User("James Isaac Neutron", "neutron@atom.com", "Belo Horizonte", true, new Week(false, true) , new Date()),
-            new User("Carl Wheezer", "carl@User.com", "Campinas",true, new Week(false, false, true), new Date()),
-            new User("Thomas Johnson", "tjhonson@Users.com", "São Paulo", true, new Week(false, true, false, false, false, true), new Date())
+            new User("James Isaac Neutron", "neutron@atom.com", "Belo Horizonte", labels.ALWAYS, new Week(false, true) , new Date()),
+            new User("Carl Wheezer", "carl@User.com", "Campinas", labels.SOMETIMES, new Week(false, false, true), new Date()),
+            new User("Thomas Johnson", "tjhonson@Users.com", "São Paulo", labels.NEVER, new Week(false, true, false, false, false, true), new Date())
         ]
     );
+
+    function addNewBiker() {
+        $scope.biker.registrationDay = new Date();
+        $scope.bikersGridOptions.data.push($scope.biker);
+        clearBiker();
+    }
+
+    function clearBiker() {
+        $scope.biker = new User();
+    }
+
+    $scope.addNewBiker = addNewBiker;
+    $scope.clearBiker = clearBiker;
 }]);

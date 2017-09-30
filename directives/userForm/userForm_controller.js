@@ -12,4 +12,6 @@ angular.module('dummyApp')
         if (!($scope.user instanceof User)) {
             throw new Error("User directive user must be a instance of User!");
         }
+
+        $scope.daysKeys = Object.keys($scope.user.daysOfTheWeek);
     }]);

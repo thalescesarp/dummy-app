@@ -5,7 +5,9 @@ angular.module("dummyApp")
 
         return {
             scope: {
-                user: '='
+                user: '=',
+                submit: '&onSubmit',
+                cancel: "&onCancel"
             },
             controller: 'UserFormCtrl',
             templateUrl: 'directives/userForm/userForm_template.html',
@@ -16,6 +18,8 @@ angular.extend(DummyApp.constructors, function () {
 
     'use strict';
 
+    //Seting the days names to objects properties keep it easy to understand
+    //but, also enables using it as an array;
     function Week(Sun, Mon, Tue, Wed, Thu, Fri, Sat) {
         this.Sun = Sun || false;
         this.Mon = Mon || false;
@@ -40,6 +44,11 @@ angular.extend(DummyApp.constructors, function () {
         }
 
         return activeDaysNames.join(", ");
+    };
+
+    Week.prototype.anyDay = function anyDay() {
+        return this.Sun || this.Mon || this.Tue || this.Wed ||
+               this.Thu || this.Fri || this.Sat;
     };
 
     function User(fullName, email, city, rideInGroup, daysOfTheWeek, registrationDay) {
