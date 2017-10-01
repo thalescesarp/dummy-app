@@ -27,4 +27,7 @@ html, body {
 .grid-table tr:hover {
   background: #C5DFBC; }
 
+.row.empty {
+  height: 20px; }
+
 /*# sourceMappingURL=components.css.map */
