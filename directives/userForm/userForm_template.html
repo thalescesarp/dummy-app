@@ -11,7 +11,7 @@
     <!-- Seven columns, one for each day of the week -->
     <div class="col-xs-7">
         <!-- I included a new label for the question because it can change from language to language -->
-        {{labels.RIDE_IN_GROUP_QUESTION}}
+        <label class="input-label">{{labels.RIDE_IN_GROUP_QUESTION}}</label>
         <div class="row col-xs-12">
             <div>
                 <input name="rideInGroup" type="radio" ng-model="user.rideInGroup" ng-value="labels.ALWAYS" required/>
@@ -27,7 +27,7 @@
             </div>
         </div>
 
-        {{labels.DAYS_OF_THE_WEEK}}
+        <label class="input-label">{{labels.DAYS_OF_THE_WEEK}}</label>
         <div class="row col-xs-12">
             <div ng-repeat="day in localDaysOfTheWeek">
                 <input name="daysOfTheWeek" type="checkbox" ng-model="user.daysOfTheWeek[daysKeys[$index]]" ng-required="!user.daysOfTheWeek.anyDay()"

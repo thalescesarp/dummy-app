@@ -165,3 +165,32 @@ accordion {
 .page-section {
     margin-top: 60px;
 }
+
+.text-field {
+    margin-bottom: 15px;
+}
+
+text-field .input-label {
+    position: relative;
+}
+
+text-field .optional-label {
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   font-weight: normal;
+}
+
+text-field .instructions-label {
+    position: absolute;
+}
+
+.input-label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+text-field span {
+    font-size: 12px;
+    color: $heavy-grey-color;
+}

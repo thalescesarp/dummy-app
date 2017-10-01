@@ -1,12 +1,12 @@
-<div class="col text-field">
-    <div class="row between-xs">
-        <div class="col col-xs-6">
+<div class="text-field bottom-xs">
+    <div class="input-label row between-xs">
+        <div class="col-xs-6">
             <label class="box">{{label}}</label>
         </div>
-        <span class="col-xs-3" ng-show="!isRequired">{{labels.OPTIONAL}}</span>
+        <span class="col-xs-3 optional-label" ng-show="!isRequired">{{labels.OPTIONAL}}</span>
     </div>
 
     <input name="{{name}}" type="text" ng-model="model" ng-maxlength="maxlength" ng-required="isRequired" ng-focus="focussed = true"
         ng-blur="focussed = false" class="box" />
-    <div ng-show="focussed && instructions">{{instructions}}</div>
+    <span class="instructions-label" ng-show="focussed && instructions">{{instructions}}</span>
 </div>

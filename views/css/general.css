@@ -18,4 +18,35 @@ html {
 .float-left {
   float: left; }
 
+input {
+  padding: 7px 10px;
+  margin: 8px 0px; }
+
+input[type=text] {
+  width: 100%;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: none; }
+
+input:focus {
+  border: 2px solid #34A010; }
+
+input[type=button] {
+  background-color: #e5e5e5;
+  color: black; }
+
+input[type=submit] {
+  background-color: #34A010;
+  color: #FFFFFF; }
+
+input[type=submit],
+input[type=button] {
+  font-weight: bold;
+  padding: 10px 8px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; }
+
 /*# sourceMappingURL=general.css.map */
