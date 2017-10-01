@@ -1,0 +1,98 @@
+[
+    {
+        "fullName": "James Isaac Neutron",
+        "email": "neutron@example.com",
+        "city": "Campinas",
+        "rideInGroup": "Always",
+        "daysOfTheWeek": {
+            "Sun": true,
+            "Mon": true,
+            "Tue": true,
+            "Wed": true,
+            "Thu": true,
+            "Fri": true,
+            "Sat": true
+        },
+        "registrationDay": "2013-08-13T11:29:00.000Z"
+    },
+    {
+        "fullName": "Carl Wheezer",
+        "email": "carl@example.com",
+        "city": "Campinas",
+        "rideInGroup": "Sometimes",
+        "daysOfTheWeek": {
+            "Sun": false,
+            "Mon": true,
+            "Tue": true,
+            "Wed": true,
+            "Thu": true,
+            "Fri": true,
+            "Sat": false
+        },
+        "registrationDay": "2013-04-19T00:29:00.000Z"
+    },
+    {
+        "fullName": "Cindy Vortex",
+        "email": "cindyvortex@example.com",
+        "city": "São Paulo",
+        "rideInGroup": "Never",
+        "daysOfTheWeek": {
+            "Sun": true,
+            "Mon": false,
+            "Tue": false,
+            "Wed": false,
+            "Thu": false,
+            "Fri": false,
+            "Sat": true
+        },
+        "registrationDay": "2013-08-13T11:29:00.000Z"
+    },
+    {
+        "fullName": "Sheen Estevez",
+        "email": "sheen@example.com",
+        "city": "São Paulo",
+        "rideInGroup": "Sometimes",
+        "daysOfTheWeek": {
+            "Sun": false,
+            "Mon": true,
+            "Tue": false,
+            "Wed": true,
+            "Thu": false,
+            "Fri": true,
+            "Sat": false
+        },
+        "registrationDay": "2013-08-13T11:29:00.000Z"
+    },
+    {
+        "fullName": "Libby Folfax",
+        "email": "folfax2014@example.com",
+        "city": "Americana",
+        "rideInGroup": "Sometimes",
+        "daysOfTheWeek": {
+            "Sun": false,
+            "Mon": true,
+            "Tue": true,
+            "Wed": true,
+            "Thu": false,
+            "Fri": false,
+            "Sat": false
+        },
+        "registrationDay": "2013-08-13T11:29:00.000Z"
+    },
+    {
+        "fullName": "Nick Dean",
+        "email": "nickd@example.com",
+        "city": "Sumaré",
+        "rideInGroup": "Always",
+        "daysOfTheWeek": {
+            "Sun": false,
+            "Mon": false,
+            "Tue": false,
+            "Wed": false,
+            "Thu": false,
+            "Fri": true,
+            "Sat": true
+        },
+        "registrationDay": "2013-08-13T11:29:00.000Z"
+    }
+]
