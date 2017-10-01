@@ -59,4 +59,8 @@ angular.module("dummyApp")
 
             $scope.breadcrumbStack = breadcrumbStack;
        });
+
+       userService.getCurrentUser().then(function(currentUser){
+           $scope.currentUser = currentUser;
+       });
     }]);

@@ -127,7 +127,6 @@ accordion {
 
 .breadcrumb a {
     color: $accent-color;
-    margin-left: 10px;
     margin-right: 10px;
     margin-top: 5px;
 }
@@ -148,10 +147,15 @@ accordion {
 .top-bar i{
     color: $accent-color;
     font-size: 20px;
-    margin-left: 10px;
 }
 
 .top-bar .app-title {
     font-weight: bold;
     font-size: 20px;
+}
+
+.user-info span{
+    font-size: 14px;
+    color: $heavy-grey-color;
+    white-space: nowrap;
 }
