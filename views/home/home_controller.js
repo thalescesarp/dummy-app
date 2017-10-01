@@ -1,5 +1,5 @@
 angular.module("dummyApp")
-    .controller('HomeCtrl', ['$scope', '$rootScope', 'userService', function ($scope, $rootScope, userService) {
+    .controller('HomeCtrl', ['$scope', '$rootScope', 'userService','$sce', function ($scope, $rootScope, userService, $sce) {
 
         'use strict';
 
@@ -8,8 +8,6 @@ angular.module("dummyApp")
         var User = DummyApp.constructors.User;
         var Week = DummyApp.constructors.Week;
         var labels = $rootScope.labels;
-
-        $scope.helpContent = "Help Test";
 
         $scope.biker = new User();
 
@@ -30,6 +28,10 @@ angular.module("dummyApp")
                 var user = userList[index];
                 $scope.bikersGridOptions.data.push(user);
             }
+        });
+
+        userService.getHelp().then(function(help) {
+            $scope.helpContent = $sce.trustAsHtml(help);
         });
 
         function addNewBiker() {

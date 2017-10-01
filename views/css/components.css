@@ -55,6 +55,6 @@ html, body {
 
 .accordion-body.animated.open {
   height: 100px;
-  overflow: hidden; }
+  overflow-y: scroll; }
 
 /*# sourceMappingURL=components.css.map */

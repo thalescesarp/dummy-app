@@ -32,7 +32,25 @@ angular.module("dummyApp")
         return deferred.promise;
     }
 
+    function getHelp() {
+        var deferred = $q.defer();
+
+        var request = {
+            method: "GET",
+            url: constants.helpFileUrl
+        };
+
+        $http(request).then(function(response){
+            deferred.resolve(response.data.help);
+        }, function(error){
+            deferred.reject(error);
+        });
+
+        return deferred.promise;
+    }
+
     return {
-        getUserList: getUserList
+        getUserList: getUserList,
+        getHelp: getHelp
     };
 }]);
