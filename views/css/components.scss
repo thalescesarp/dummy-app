@@ -116,7 +116,6 @@ accordion {
 
 .gray-icon {
     color: $heavy-grey-color;
-    float: left;
     margin: 5px;
 }
 
@@ -124,4 +123,35 @@ accordion {
     margin: 15px;
     color: $heavy-grey-color;
     float: left;
+}
+
+.breadcrumb a {
+    color: $accent-color;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.current-breadcrumb {
+    color: black !important;
+}
+
+.breadcrumb i{
+    font-size: 20px;
+    margin: 0px;
+}
+
+.top-bar {
+    height: 42px;
+}
+
+.top-bar i{
+    color: $accent-color;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.top-bar .app-title {
+    font-weight: bold;
+    font-size: 20px;
 }

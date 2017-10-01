@@ -1,5 +1,5 @@
 angular.module("dummyApp")
-    .controller('HomeCtrl', ['$scope', '$rootScope', 'userService', 'pathService', '$sce', function ($scope, $rootScope, userService, pathService, $sce) {
+    .controller('HomeCtrl', ['$scope', '$rootScope', 'userService', 'pathService', '$sce', '$route', function ($scope, $rootScope, userService, pathService, $sce, $route) {
 
         'use strict';
 
@@ -50,4 +50,13 @@ angular.module("dummyApp")
         pathService.getPath().then(function(path){
             $scope.path = path;
         });
+
+       pathService.getBreadCrumbByRoute($route.current).then(function(breadcrumbStack){
+            for (var index = 0; index < breadcrumbStack.length; index++) {
+                var item = breadcrumbStack[index];
+                item.breadcrumbItem = $sce.trustAsHtml(item.breadcrumbItem);
+            }
+
+            $scope.breadcrumbStack = breadcrumbStack;
+       });
     }]);

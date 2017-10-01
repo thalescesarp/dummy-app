@@ -20,7 +20,37 @@ angular.module("dummyApp")
         return deferred.promise;
     }
 
+    function getBreadCrumbByRoute(currentRoute) {
+        var deferred = $q.defer();
+
+        deferred.resolve([
+            {
+                name: "home",
+                breadcrumbItem: "<i class=\"fa fa-home\" aria-hidden=\"true\"></i>",
+                route: "",
+            },
+            {
+                name: "page1",
+                breadcrumbItem: "Page1",
+                route: "",
+            },
+            {
+                name: "breadcrumb",
+                breadcrumbItem: "Breadcrumb",
+                route: "",
+            },
+            {
+                name: "currentpage",
+                breadcrumbItem: "Currentpage",
+                route: "",
+            }
+        ]);
+
+        return deferred.promise;
+    }
+
     return {
-        getPath: getPath
+        getPath: getPath,
+        getBreadCrumbByRoute: getBreadCrumbByRoute
     };
 }]);

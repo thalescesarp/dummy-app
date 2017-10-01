@@ -1,4 +1,19 @@
-<div class="col" ng-controller="HomeCtrl">
+<div ng-controller="HomeCtrl">
+
+    <div class="top-bar row col-xs-12 middle-xs">
+        <i class="fa fa-bars menu-button" aria-hidden="true"></i>
+        <span class="col-xs-6">
+            <span class="app-title">{{labels.APP_TITLE}}</span>
+        </span>
+        <div class="col-xs-6"></div>
+    </div>
+
+    <div class="breadcrumb" class="row col-xs-12">
+        <span ng-repeat="page in breadcrumbStack" href="{{page.route}}">
+            <i ng-hide="$first" class="fa fa-angle-right gray-icon" aria-hidden="true"></i>
+            <a ng-class="{'current-breadcrumb' : $last}" ng-bind-html="page.breadcrumbItem"></a>
+        </span>
+    </div>
 
     <div class="row center-xs middle-xs path-bar">
         <div class="col-xs-9">
