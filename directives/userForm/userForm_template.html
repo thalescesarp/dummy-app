@@ -1,12 +1,13 @@
 <div>
     <form name="userForm" class="row start-xs" ng-submit="submit()">
-        <div class="col col-xs-5">
+        <div class="col col-xs-4">
             <text-field label="{{labels.FULL_NAME}}" name="fullName" ng-model="user.fullName" on-focus-instructions="{{labels.INPUT_FOCUS_INSTRUCTIONS}}"
                 required></text-field>
             <text-field label="{{labels.EMAIL}}" name="email" ng-model="user.email" required></text-field>
             <text-field label="{{labels.CITY}}" name="city" ng-model="user.city"></text-field>
         </div>
-
+        <div class="col col-xs-1">
+        </div>
         <!-- Seven columns, one for each day of the week -->
         <div class="col col-xs-7">
             <!-- I included a new label for the question because it can change from language to language -->
