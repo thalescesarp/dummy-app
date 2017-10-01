@@ -34,7 +34,7 @@
         </div>
     </div>
 
-    <div class="row col-xs-12 center-xs">
+    <div class="page-section row col-xs-12 center-xs">
         <accordion class="col-xs-10 start-xs" animate="false">
             <accordion-title>
                 <span class="text-bold">{{labels.HELP}}</span>
@@ -46,14 +46,14 @@
         </accordion>
     </div>
 
-    <div class="row center-xs">
+    <div class="page-section col-xs-12 row center-xs">
         <div class="col-xs-10 start-xs">
             <h1>{{labels.USER_REGISTRATION}}</h1>
             <user-form user="biker" on-submit="addNewBiker()" on-cancel="clearBiker()"></user-form>
         </div>
     </div>
 
-    <div class="row center-xs">
+    <div class="page-section row center-xs">
         <div class="col-xs-10 start-xs">
             <h1>{{labels.BIKERS}}</h1>
             <grid options="bikersGridOptions"></grid>

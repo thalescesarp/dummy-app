@@ -53,6 +53,7 @@ html, body
 accordion {
     border: 1px solid $grey-border-color;
     border-radius: 5px;
+    margin-left: 30px;
 }
 
 .accordion-bar {
@@ -159,4 +160,8 @@ accordion {
     font-size: 14px;
     color: $heavy-grey-color;
     white-space: nowrap;
+}
+
+.page-section {
+    margin-top: 60px;
 }

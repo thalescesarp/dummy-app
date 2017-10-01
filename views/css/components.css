@@ -58,7 +58,8 @@ html, body {
 
 accordion {
   border: 1px solid #e5e5e5;
-  border-radius: 5px; }
+  border-radius: 5px;
+  margin-left: 30px; }
 
 .accordion-bar {
   background: #EFEFEF;
@@ -145,5 +146,8 @@ accordion {
   font-size: 14px;
   color: #999999;
   white-space: nowrap; }
+
+.page-section {
+  margin-top: 60px; }
 
 /*# sourceMappingURL=components.css.map */
