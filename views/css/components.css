@@ -28,6 +28,6 @@ html, body {
   background: #C5DFBC; }
 
 .row.empty {
-  height: 20px; }
+  min-height: 20px; }
 
 /*# sourceMappingURL=components.css.map */
