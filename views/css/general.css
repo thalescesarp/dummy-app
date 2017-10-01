@@ -2,4 +2,10 @@
 html {
   font-family: Arial; }
 
+.float-left {
+  float: left; }
+
+.m-15 {
+  margin: 15px; }
+
 /*# sourceMappingURL=general.css.map */

@@ -3,6 +3,12 @@
 html {
   font-family: Arial; }
 
+.float-left {
+  float: left; }
+
+.m-15 {
+  margin: 15px; }
+
 html, body {
   height: 100%; }
 
@@ -54,7 +60,7 @@ html, body {
   overflow: hidden; }
 
 .accordion-body.animated.open {
-  height: 100px;
+  height: 200px;
   overflow-y: scroll; }
 
 /*# sourceMappingURL=components.css.map */
