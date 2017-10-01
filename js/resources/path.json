@@ -1,0 +1,25 @@
+{
+    "list": [
+        {
+            "icon": "fa-puzzle-piece",
+            "typeName": "Sector",
+            "name": "Sports"
+        },
+        {
+            "icon": "fa-futbol-o",
+            "typeName": "Sport Type",
+            "name": "Bycicles"
+        },
+        {
+            "icon": "fa-bicycle",
+            "typeName": "Mode",
+            "name": "Mountain Cross"
+        }
+    ],
+    
+    "last": {
+        "icon": "fa-recycle",
+        "typeName": "Responsability",
+        "name": "Be Green!"
+    }
+}

@@ -1,5 +1,5 @@
 angular.module("dummyApp")
-    .controller('HomeCtrl', ['$scope', '$rootScope', 'userService','$sce', function ($scope, $rootScope, userService, $sce) {
+    .controller('HomeCtrl', ['$scope', '$rootScope', 'userService', 'pathService', '$sce', function ($scope, $rootScope, userService, pathService, $sce) {
 
         'use strict';
 
@@ -46,4 +46,8 @@ angular.module("dummyApp")
 
         $scope.addNewBiker = addNewBiker;
         $scope.clearBiker = clearBiker;
+
+        pathService.getPath().then(function(path){
+            $scope.path = path;
+        });
     }]);

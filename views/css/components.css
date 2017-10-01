@@ -6,6 +6,19 @@ html {
 .text-bold {
   font-weight: bold; }
 
+.text-secondary {
+  font-size: 14px;
+  color: #999999; }
+
+.text-left {
+  text-align: left; }
+
+.text-middle {
+  vertical-align: middle; }
+
+.float-left {
+  float: left; }
+
 html, body {
   height: 100%; }
 
@@ -51,6 +64,29 @@ accordion {
   background: #EFEFEF;
   height: 40px; }
 
+.path-bar {
+  background: #EFEFEF;
+  height: 80px; }
+
+.path-item {
+  min-width: 155px;
+  height: 30px; }
+
+.path-icon {
+  float: left;
+  margin: 5px; }
+
+.path-gray .path-icon {
+  color: #999999; }
+
+.path-green .path-icon,
+.path-green .text-bold {
+  color: #34A010; }
+
+.path-text {
+  white-space: nowrap;
+  text-align: left; }
+
 .accordion-toggle {
   color: #34A010;
   font-size: 12px; }
@@ -72,9 +108,14 @@ accordion {
   height: 200px;
   overflow-y: scroll; }
 
-.help-text-icon {
+.gray-icon {
   color: #999999;
   float: left;
-  margin: 15px; }
+  margin: 5px; }
+
+.gray-floating-icon {
+  margin: 15px;
+  color: #999999;
+  float: left; }
 
 /*# sourceMappingURL=components.css.map */

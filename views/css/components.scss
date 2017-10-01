@@ -60,6 +60,35 @@ accordion {
     height: 40px;
 }
 
+.path-bar {
+    background: $grey-color;
+    height: 80px; 
+}
+
+.path-item {
+    min-width: 155px;
+    height: 30px;
+}
+
+.path-icon {
+    float: left;
+    margin: 5px;
+}
+
+.path-gray .path-icon {
+    color: $heavy-grey-color
+}
+
+.path-green .path-icon,
+.path-green .text-bold {
+    color: $accent-color;
+}
+
+.path-text {
+    white-space: nowrap;
+    text-align: left;
+}
+
 .accordion-toggle {
     color: $accent-color;
     font-size: 12px;
@@ -85,8 +114,14 @@ accordion {
     overflow-y: scroll;
 }
 
-.help-text-icon {
+.gray-icon {
     color: $heavy-grey-color;
     float: left;
+    margin: 5px;
+}
+
+.gray-floating-icon {
     margin: 15px;
+    color: $heavy-grey-color;
+    float: left;
 }

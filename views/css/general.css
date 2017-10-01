@@ -5,4 +5,17 @@ html {
 .text-bold {
   font-weight: bold; }
 
+.text-secondary {
+  font-size: 14px;
+  color: #999999; }
+
+.text-left {
+  text-align: left; }
+
+.text-middle {
+  vertical-align: middle; }
+
+.float-left {
+  float: left; }
+
 /*# sourceMappingURL=general.css.map */
