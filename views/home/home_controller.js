@@ -9,7 +9,7 @@ angular.module("dummyApp")
         var Week = DummyApp.constructors.Week;
         var labels = $rootScope.labels;
 
-        $scope.content = "Scope Test";
+        $scope.helpContent = "Help Test";
 
         $scope.biker = new User();
 

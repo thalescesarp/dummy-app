@@ -1,0 +1,7 @@
+<div class="row between-xs accordion-title">
+    <span class="col-xs-11" ng-transclude="title"></span>
+    <span class="accordion-toggle col-xs-1" ng-show="!isOpen" ng-click="open()">{{labels.OPEN}}</span>
+    <span class="accordion-toggle col-xs-1" ng-show="isOpen" ng-click="close()">{{labels.CLOSE}}</span>
+</div>
+<div class="accordion-body" ng-transclude="body" ng-class="{'open': isOpen, 'closed': !isOpen, 'animated': animate}">
+</div>

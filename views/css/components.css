@@ -30,4 +30,31 @@ html, body {
 .row.empty {
   min-height: 20px; }
 
+.accordion-toggle {
+  cursor: pointer;
+  transition: 0.4s; }
+
+.accordion-body.closed {
+  display: none; }
+
+.accordion-body.open {
+  display: block; }
+
+/*anmimated class can be toggled on or off easily*/
+.accordion-body.animated {
+  display: block !important;
+  -moz-transition: 300ms;
+  -ms-transition: 300ms;
+  -o-transition: 300ms;
+  -webkit-transition: 300ms;
+  transition: 300ms; }
+
+.accordion-body.animated.closed {
+  height: 0px;
+  overflow: hidden; }
+
+.accordion-body.animated.open {
+  height: 100px;
+  overflow: hidden; }
+
 /*# sourceMappingURL=components.css.map */

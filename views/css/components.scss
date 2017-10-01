@@ -36,3 +36,36 @@ html, body
 .row.empty {
    min-height: 20px;
 }
+
+.accordion-toggle {
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.accordion-body.closed {
+    display: none;
+}
+
+.accordion-body.open {
+    display: block;
+}
+
+/*anmimated class can be toggled on or off easily*/
+.accordion-body.animated {
+    display: block !important;
+    -moz-transition: $transition-time;
+    -ms-transition: $transition-time;
+    -o-transition: $transition-time;
+    -webkit-transition: $transition-time;
+    transition: $transition-time;
+}
+
+.accordion-body.animated.closed {
+    height:0px; 
+    overflow: hidden;
+}
+
+.accordion-body.animated.open {
+    height:100px;
+    overflow: hidden;
+}
