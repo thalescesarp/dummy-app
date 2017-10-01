@@ -1,45 +1,46 @@
-<div>
-    <form name="userForm" class="row start-xs" ng-submit="submit()">
-        <div class="col col-xs-4">
-            <text-field label="{{labels.FULL_NAME}}" name="fullName" ng-model="user.fullName" on-focus-instructions="{{labels.INPUT_FOCUS_INSTRUCTIONS}}"
-                required></text-field>
-            <text-field label="{{labels.EMAIL}}" name="email" ng-model="user.email" required></text-field>
-            <text-field label="{{labels.CITY}}" name="city" ng-model="user.city"></text-field>
-        </div>
-        <div class="col col-xs-1">
-        </div>
-        <!-- Seven columns, one for each day of the week -->
-        <div class="col col-xs-7">
-            <!-- I included a new label for the question because it can change from language to language -->
-            {{labels.RIDE_IN_GROUP_QUESTION}}
-            <div class="row col-xs-12">
-                <div>
-                    <input name="rideInGroup" type="radio" ng-model="user.rideInGroup" ng-value="labels.ALWAYS" equired/>
-                    <label>{{labels.ALWAYS}}</label>
-                </div>
-                <div>
-                    <input name="rideInGroup" type="radio" ng-model="user.rideInGroup" ng-value="labels.SOMETIMES" required/>
-                    <label>{{labels.SOMETIMES}}</label>
-                </div>
-                <div>
-                    <input name="rideInGroup" type="radio" ng-model="user.rideInGroup" ng-value="labels.NEVER" required/>
-                    <label>{{labels.NEVER}}</label>
-                </div>
+<form name="userForm" class="row start-xs" ng-submit="submit()">
+    <div class="col-xs-4">
+        <text-field label="{{labels.FULL_NAME}}" name="fullName" ng-model="user.fullName" on-focus-instructions="{{labels.INPUT_FOCUS_INSTRUCTIONS}}"
+            required></text-field>
+        <text-field label="{{labels.EMAIL}}" name="email" ng-model="user.email" required></text-field>
+        <text-field label="{{labels.CITY}}" name="city" ng-model="user.city"></text-field>
+    </div>
+    <!-- One empty column to give make some space between the text-fields and the radios and checkboxes -->
+    <div class="col-xs-1">
+    </div>
+    <!-- Seven columns, one for each day of the week -->
+    <div class="col-xs-7">
+        <!-- I included a new label for the question because it can change from language to language -->
+        {{labels.RIDE_IN_GROUP_QUESTION}}
+        <div class="row col-xs-12">
+            <div>
+                <input name="rideInGroup" type="radio" ng-model="user.rideInGroup" ng-value="labels.ALWAYS" required/>
+                <label>{{labels.ALWAYS}}</label>
             </div>
+            <div>
+                <input name="rideInGroup" type="radio" ng-model="user.rideInGroup" ng-value="labels.SOMETIMES" required/>
+                <label>{{labels.SOMETIMES}}</label>
+            </div>
+            <div>
+                <input name="rideInGroup" type="radio" ng-model="user.rideInGroup" ng-value="labels.NEVER" required/>
+                <label>{{labels.NEVER}}</label>
+            </div>
+        </div>
 
-            {{labels.DAYS_OF_THE_WEEK}}
-            <div class="row col-xs-12">
-                <div ng-repeat="day in localDaysOfTheWeek">
-                    <input name="daysOfTheWeek" type="checkbox" ng-model="user.daysOfTheWeek[daysKeys[$index]]" ng-required="!user.daysOfTheWeek.anyDay()"
-                    />
-                    <label>{{day}}</label>
-                </div>
-            </div>
-
-            <div class="row end-xs">
-                <input type="button" name="cancel" value="{{labels.CANCEL}}" ng-click="cancel()">
-                <input type="submit" name="save" value="{{labels.SAVE}}">
+        {{labels.DAYS_OF_THE_WEEK}}
+        <div class="row col-xs-12">
+            <div ng-repeat="day in localDaysOfTheWeek">
+                <input name="daysOfTheWeek" type="checkbox" ng-model="user.daysOfTheWeek[daysKeys[$index]]" ng-required="!user.daysOfTheWeek.anyDay()"
+                />
+                <label>{{day}}</label>
             </div>
         </div>
-    </form>
-</div>
+
+        <div>.</div>
+
+        <div class="row end-xs">
+            <input type="button" name="cancel" class="col-xs-2" value="{{labels.CANCEL}}" ng-click="cancel()" />
+            <input type="submit" name="save" class="col-xs-2" value="{{labels.SAVE}}" />
+        </div>
+    </div>
+</form>

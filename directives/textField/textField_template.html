@@ -3,7 +3,7 @@
         <div class="col col-xs-6">
             <label class="box">{{label}}</label>
         </div>
-        <span ng-show="!isRequired">{{labels.OPTIONAL}}</span>
+        <span class="col-xs-3" ng-show="!isRequired">{{labels.OPTIONAL}}</span>
     </div>
 
     <input name="{{name}}" type="text" ng-model="model" ng-maxlength="maxlength" ng-required="isRequired" ng-focus="focussed = true"
