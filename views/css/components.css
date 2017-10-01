@@ -3,11 +3,8 @@
 html {
   font-family: Arial; }
 
-.float-left {
-  float: left; }
-
-.m-15 {
-  margin: 15px; }
+.text-bold {
+  font-weight: bold; }
 
 html, body {
   height: 100%; }
@@ -46,6 +43,18 @@ html, body {
 .accordion-body.open {
   display: block; }
 
+accordion {
+  border: 1px solid #e5e5e5;
+  border-radius: 5px; }
+
+.accordion-bar {
+  background: #EFEFEF;
+  height: 40px; }
+
+.accordion-toggle {
+  color: #34A010;
+  font-size: 12px; }
+
 /*anmimated class can be toggled on or off easily*/
 .accordion-body.animated {
   display: block !important;
@@ -62,5 +71,10 @@ html, body {
 .accordion-body.animated.open {
   height: 200px;
   overflow-y: scroll; }
+
+.help-text-icon {
+  color: #999999;
+  float: left;
+  margin: 15px; }
 
 /*# sourceMappingURL=components.css.map */

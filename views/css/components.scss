@@ -50,6 +50,21 @@ html, body
     display: block;
 }
 
+accordion {
+    border: 1px solid $grey-border-color;
+    border-radius: 5px;
+}
+
+.accordion-bar {
+    background: $grey-color;
+    height: 40px;
+}
+
+.accordion-toggle {
+    color: $accent-color;
+    font-size: 12px;
+}
+
 /*anmimated class can be toggled on or off easily*/
 .accordion-body.animated {
     display: block !important;
@@ -68,4 +83,10 @@ html, body
 .accordion-body.animated.open {
     height:200px;
     overflow-y: scroll;
+}
+
+.help-text-icon {
+    color: $heavy-grey-color;
+    float: left;
+    margin: 15px;
 }
