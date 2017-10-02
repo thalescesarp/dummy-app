@@ -1,0 +1,7 @@
+<input id="{{name}}{{index}}" name="{{name}}" type="checkbox" ng-model="check" ng-required="isRequired">
+<span ng-click="clicked()" class="fa-stack fa-md">
+    <i class="checkbox-border fa fa-square-o fa-stack-2x" ng-class="{'checked': check}"></i>
+    <i class="fa fa-check fa-stack-1x" ng-show="check"></i>
+</span>
+</input>
+<label for="{{name}}{{index}}">{{label}}</label>

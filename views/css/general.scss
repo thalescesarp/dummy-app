@@ -1,5 +1,6 @@
 /* A css file exclusive for general rules like fonts */ 
 @import "default-config.scss";
+@import url(node_modules/font-awesome/css/font-awesome.min.css);
 
 html
 {
@@ -62,4 +63,16 @@ input[type=button] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+input[type=checkbox] { display:none; }
+checkbox {
+    margin-right: 10px; 
+}
+.checkbox-border {
+    color: $grey-border-color;
+}
+
+.checked { 
+    color: $accent-color;
 }

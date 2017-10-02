@@ -14,27 +14,28 @@
         <label class="input-label">{{labels.RIDE_IN_GROUP_QUESTION}}</label>
         <div class="row col-xs-12">
             <div>
-                <input name="rideInGroup" type="radio" ng-model="user.rideInGroup" ng-value="labels.ALWAYS" required/>
-                <label>{{labels.ALWAYS}}</label>
+                <input id="rideInGroup1" name="rideInGroup" type="radio" ng-model="user.rideInGroup" ng-value="labels.ALWAYS" required/>
+                <label for="rideInGroup1">{{labels.ALWAYS}}</label>
             </div>
             <div>
-                <input name="rideInGroup" type="radio" ng-model="user.rideInGroup" ng-value="labels.SOMETIMES" required/>
-                <label>{{labels.SOMETIMES}}</label>
+                <input id="rideInGroup2" name="rideInGroup" type="radio" ng-model="user.rideInGroup" ng-value="labels.SOMETIMES" required/>
+                <label for="rideInGroup2">{{labels.SOMETIMES}}</label>
             </div>
             <div>
-                <input name="rideInGroup" type="radio" ng-model="user.rideInGroup" ng-value="labels.NEVER" required/>
-                <label>{{labels.NEVER}}</label>
+                <input id="rideInGroup3" name="rideInGroup" type="radio" ng-model="user.rideInGroup" ng-value="labels.NEVER" required/>
+                <label for="rideInGroup3">{{labels.NEVER}}</label>
             </div>
         </div>
 
         <label class="input-label">{{labels.DAYS_OF_THE_WEEK}}</label>
         <div class="row col-xs-12">
             <div ng-repeat="day in localDaysOfTheWeek">
-                <input name="daysOfTheWeek" type="checkbox" ng-model="user.daysOfTheWeek[daysKeys[$index]]" ng-required="!user.daysOfTheWeek.anyDay()"
-                />
-                <label>{{day}}</label>
+                <checkbox label="{{day}}" name="daysOfTheWeek" index="$index" ng-model="user.daysOfTheWeek[daysKeys[$index]]" ng-required="!user.daysOfTheWeek.anyDay()"></checkbox>
             </div>
         </div>
+        <!-- <div ng-messages="userForm.daysOfTheWeek.$error" class="validation-error" role="alert">
+            <div ng-if="!user.daysOfTheWeek.anyDay()" ng-message="required">Erro</div>
+        </div> -->
 
         <div class="row empty"></div>
 
