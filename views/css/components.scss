@@ -194,3 +194,23 @@ text-field span {
     font-size: 12px;
     color: $heavy-grey-color;
 }
+
+input[type=checkbox], input[type=radio] { display:none; }
+checkbox, radio {
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+radio {
+    padding: 0px;
+}
+
+.checkbox-border, .radio-border {
+    color: $grey-border-color;
+}
+
+.checked { 
+    color: $accent-color;
+}

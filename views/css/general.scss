@@ -64,15 +64,3 @@ input[type=button] {
     border-radius: 4px;
     cursor: pointer;
 }
-
-input[type=checkbox] { display:none; }
-checkbox {
-    margin-right: 10px; 
-}
-.checkbox-border {
-    color: $grey-border-color;
-}
-
-.checked { 
-    color: $accent-color;
-}

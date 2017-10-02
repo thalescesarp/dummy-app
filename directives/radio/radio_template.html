@@ -1,0 +1,7 @@
+<input id="{{name}}{{index}}" name="{{name}}" type="radio" ng-model="model" ng-required="isRequired" ng-value="value">
+<span ng-click="clicked()" class="fa-stack fa-md">
+    <i class="radio-border fa fa-circle-thin fa-stack-2x" ng-class="{'checked': model == value}"></i>
+    <i class="fa fa-circle fa-stack-1x" ng-show="model == value"></i>
+</span>
+</input>
+<label for="{{name}}{{index}}">{{label}}</label>

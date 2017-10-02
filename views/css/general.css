@@ -50,16 +50,4 @@ input[type=button] {
   border-radius: 4px;
   cursor: pointer; }
 
-input[type=checkbox] {
-  display: none; }
-
-checkbox {
-  margin-right: 10px; }
-
-.checkbox-border {
-  color: #e5e5e5; }
-
-.checked {
-  color: #34A010; }
-
 /*# sourceMappingURL=general.css.map */
