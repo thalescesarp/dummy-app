@@ -1,39 +1,5 @@
 <div ng-controller="HomeCtrl">
 
-    <div class="top-bar row col-xs-12 middle-xs center-xs">
-        <span class="col-xs-9 start-xs">
-            <i class="fa fa-bars menu-button" aria-hidden="true"></i>
-            <span class="app-title col-xs-11">{{labels.APP_TITLE}}</span>
-        </span>
-        <div class="col-xs-1 user-info">
-            <span>
-                <i class="fa fa-user menu-button" aria-hidden="true"></i>
-                <span>{{currentUser.name}} | </span>
-                <span>{{labels.LOG_OUT}}</span>
-            </span>
-        </div>
-    </div>
-
-    <div class="breadcrumb row col-xs-12 center-xs">
-        <div class="col-xs-10 start-xs">
-            <span ng-repeat="page in breadcrumbStack" href="{{page.route}}">
-                <i ng-hide="$first" class="fa fa-angle-right gray-icon" aria-hidden="true"></i>
-                <a ng-class="{'current-breadcrumb' : $last}" ng-bind-html="page.breadcrumbItem"></a>
-            </span>
-        </div>
-    </div>
-
-    <div class="row col-xs-12 center-xs middle-xs path-bar">
-        <div class="col-xs-9">
-            <div class="row path-gray">
-                <path-icon ng-repeat="pathItem in path.list" path-item="pathItem"></path-icon>
-            </div>
-        </div>
-        <div class="col-xs-1 path-green">
-            <path-icon path-item="path.last"></path-icon>
-        </div>
-    </div>
-
     <div class="page-section row col-xs-12 center-xs">
         <accordion class="col-xs-10 start-xs" animate="false">
             <accordion-title>

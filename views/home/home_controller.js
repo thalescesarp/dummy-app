@@ -46,21 +46,4 @@ angular.module("dummyApp")
 
         $scope.addNewBiker = addNewBiker;
         $scope.clearBiker = clearBiker;
-
-        pathService.getPath().then(function(path){
-            $scope.path = path;
-        });
-
-       pathService.getBreadCrumbByRoute($route.current).then(function(breadcrumbStack){
-            for (var index = 0; index < breadcrumbStack.length; index++) {
-                var item = breadcrumbStack[index];
-                item.breadcrumbItem = $sce.trustAsHtml(item.breadcrumbItem);
-            }
-
-            $scope.breadcrumbStack = breadcrumbStack;
-       });
-
-       userService.getCurrentUser().then(function(currentUser){
-           $scope.currentUser = currentUser;
-       });
     }]);
