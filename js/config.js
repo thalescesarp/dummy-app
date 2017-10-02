@@ -10,13 +10,11 @@
             $routeProvider
                 .when("/", {
                     templateUrl: "views/home/home.html"
+                }).when("/bikers", {
+                    templateUrl: "views/bikers/bikers.html"
+                })
+                .when("/help", {
+                    templateUrl: "views/help/help.html"
                 });
-            //TODO:
-            // .when("/bikers", {
-            //     templateUrl: "views/bikers.html"
-            // })
-            // .when("/help", {
-            //     templateUrl: "views/help.html"
-            // });
         }]);
 })();
